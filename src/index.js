@@ -1,13 +1,14 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import React from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './components/App';
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "shards-ui/dist/css/shards.min.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'shards-ui/dist/css/shards.min.css';
 
-render((
+render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>
-), document.getElementById('root'));
+  </BrowserRouter>,
+  document.getElementById('root')
+);

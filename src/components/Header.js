@@ -39,6 +39,7 @@ const Header = ({ location }) => {
             </Link>
           </NavItem>
         </Nav>
+        
       </Navbar>
     </header>
   );

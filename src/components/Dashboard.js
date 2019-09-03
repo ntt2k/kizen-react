@@ -23,7 +23,6 @@ const Dashboard = ({ smallStats }) => (
         <Col sm="12" md="6" lg="3" className="mb-4" key={idx} {...stats.attrs}>
           <SmallStats
             id={`small-stats-${idx}`}
-            variation="1"
             chartData={stats.datasets}
             chartLabels={stats.chartLabels}
             label={stats.label}
