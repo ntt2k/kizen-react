@@ -1,6 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
-import { Card, CardBody } from 'shards-react';
+import { Card } from 'shards-react';
 
 export const CardStyled = styled(Card)`
   min-height: 8.7rem;

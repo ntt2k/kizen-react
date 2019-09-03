@@ -6,7 +6,7 @@ import PageTitle from './utils/PageTitle';
 import SmallStats from './utils/SmallStats';
 import BigStats from './utils/BigStats';
 
-const Dashboard = ({ smallStats }) => (
+const Dashboard = ({ chartData }) => (
   <Container fluid className="main-content-container px-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
@@ -19,17 +19,17 @@ const Dashboard = ({ smallStats }) => (
 
     {/* Small Stats Blocks */}
     <Row>
-      {smallStats.map((stats, idx) => (
-        <Col sm="12" md="6" lg="3" className="mb-4" key={idx} {...stats.attrs}>
+      {chartData.map((chart, idx) => (
+        <Col sm="12" md="6" lg="3" className="mb-4" key={idx} {...chart.attrs}>
           <SmallStats
-            id={`small-stats-${idx}`}
-            chartData={stats.datasets}
-            chartLabels={stats.chartLabels}
-            label={stats.label}
-            value={stats.value}
-            percentage={stats.percentage}
-            increase={stats.increase}
-            decrease={stats.decrease}
+            id={`small-chart-${idx}`}
+            chartData={chart.datasets}
+            chartLabels={chart.chartLabels}
+            label={chart.label}
+            value={chart.value}
+            percentage={chart.percentage}
+            increase={chart.increase}
+            decrease={chart.decrease}
           />
         </Col>
       ))}
@@ -45,14 +45,11 @@ const Dashboard = ({ smallStats }) => (
 );
 
 Dashboard.propTypes = {
-  /**
-   * The small stats dataset.
-   */
-  smallStats: PropTypes.array
+  chartData: PropTypes.array
 };
 
 Dashboard.defaultProps = {
-  smallStats: [
+  chartData: [
     {
       label: 'Bitcoin (BTC)',
       value: '17,281',
