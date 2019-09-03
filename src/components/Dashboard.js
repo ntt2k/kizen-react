@@ -11,8 +11,8 @@ const Dashboard = ({ smallStats }) => (
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
       <PageTitle
-        title="Blog Overview"
         subtitle="Dashboard"
+        title="CoinTracker"
         className="text-sm-left mb-3"
       />
     </Row>
@@ -20,7 +20,7 @@ const Dashboard = ({ smallStats }) => (
     {/* Small Stats Blocks */}
     <Row>
       {smallStats.map((stats, idx) => (
-        <Col className="col-lg mb-4" key={idx} {...stats.attrs}>
+        <Col sm="12" md="6" lg="3" className="mb-4" key={idx} {...stats.attrs}>
           <SmallStats
             id={`small-stats-${idx}`}
             variation="1"
@@ -106,25 +106,6 @@ Dashboard.defaultProps = {
           backgroundColor: 'rgba(255,180,0,0.1)',
           borderColor: 'rgb(255,180,0)',
           data: [2, 3, 3, 3, 4, 3, 3]
-        }
-      ]
-    },
-    {
-      label: 'New Customers',
-      value: '29',
-      percentage: '2.71%',
-      increase: false,
-      decrease: true,
-      chartLabels: [null, null, null, null, null, null, null],
-      attrs: { md: '4', sm: '6' },
-      datasets: [
-        {
-          label: 'Today',
-          fill: 'start',
-          borderWidth: 1.5,
-          backgroundColor: 'rgba(255,65,105,0.1)',
-          borderColor: 'rgb(255,65,105)',
-          data: [1, 7, 1, 3, 1, 4, 8]
         }
       ]
     },

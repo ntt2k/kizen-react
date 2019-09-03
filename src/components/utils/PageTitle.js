@@ -1,7 +1,23 @@
 import React from "react";
+import styled from "styled-components";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import { Col } from "shards-react";
+
+const Subtitle = styled.span`
+  letter-spacing: .125rem;
+  color: #818ea3;
+  font-size: 0.85rem;
+`;
+
+const Title = styled.h3`
+  font-size: 1.625rem;
+  font-weight: 500;
+  color: #3d5170;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+`;
 
 const PageTitle = ({ title, subtitle, className, ...attrs }) => {
   const classes = classNames(
@@ -13,8 +29,8 @@ const PageTitle = ({ title, subtitle, className, ...attrs }) => {
 
   return (
     <Col xs="12" sm="4" className={classes} { ...attrs }>
-      <span className="text-uppercase page-subtitle">{subtitle}</span>
-      <h3 className="page-title">{title}</h3>
+      <Subtitle>{subtitle}</Subtitle>
+      <Title>{title}</Title>
     </Col>
   )
 };
