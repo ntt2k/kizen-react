@@ -65,7 +65,7 @@ class BigStats extends React.Component {
       }
     };
 
-    const chartData = {
+    const formattedChartData = {
       labels: Array.from(new Array(30), (_, i) => (i === 0 ? 1 : i)),
       datasets: [
         {
@@ -162,13 +162,13 @@ class BigStats extends React.Component {
     const CryptoBigChart = new Chart(this.canvasRef.current, {
       type: 'LineWithLine',
       options: chartOptions,
-      data: chartData
+      data: formattedChartData
     });
 
     // They can still be triggered on hover.
     const buoMeta = CryptoBigChart.getDatasetMeta(0);
     buoMeta.data[0]._model.radius = 0;
-    buoMeta.data[chartData.datasets[0].data.length - 1]._model.radius = 0;
+    buoMeta.data[formattedChartData.datasets[0].data.length - 1]._model.radius = 0;
 
     // Render the chart.
     CryptoBigChart.render();
