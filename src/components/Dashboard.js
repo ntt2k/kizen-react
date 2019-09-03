@@ -54,43 +54,26 @@ Dashboard.propTypes = {
 Dashboard.defaultProps = {
   smallStats: [
     {
-      label: 'Posts',
-      value: '2,390',
-      percentage: '4.7%',
-      increase: true,
+      label: 'Bitcoin (BTC)',
+      value: '17,281',
+      percentage: '2.4%',
+      increase: false,
+      decrease: true,
       chartLabels: [null, null, null, null, null, null, null],
-      attrs: { md: '6', sm: '6' },
+      attrs: { md: '4', sm: '6' },
       datasets: [
         {
           label: 'Today',
           fill: 'start',
           borderWidth: 1.5,
-          backgroundColor: 'rgba(0, 184, 216, 0.1)',
-          borderColor: 'rgb(0, 184, 216)',
-          data: [1, 2, 1, 3, 5, 4, 7]
+          backgroundColor: 'rgb(0,123,255,0.1)',
+          borderColor: 'rgb(0,123,255)',
+          data: [3, 2, 3, 2, 4, 5, 4]
         }
       ]
     },
     {
-      label: 'Pages',
-      value: '182',
-      percentage: '12.4',
-      increase: true,
-      chartLabels: [null, null, null, null, null, null, null],
-      attrs: { md: '6', sm: '6' },
-      datasets: [
-        {
-          label: 'Today',
-          fill: 'start',
-          borderWidth: 1.5,
-          backgroundColor: 'rgba(23,198,113,0.1)',
-          borderColor: 'rgb(23,198,113)',
-          data: [1, 2, 3, 3, 3, 4, 4]
-        }
-      ]
-    },
-    {
-      label: 'Comments',
+      label: 'Bitcoin Cash (BCH)',
       value: '8,147',
       percentage: '3.8%',
       increase: false,
@@ -109,24 +92,41 @@ Dashboard.defaultProps = {
       ]
     },
     {
-      label: 'Subscribers',
-      value: '17,281',
-      percentage: '2.4%',
-      increase: false,
-      decrease: true,
+      label: 'Ethereum (ETH)',
+      value: '2,390',
+      percentage: '4.7%',
+      increase: true,
       chartLabels: [null, null, null, null, null, null, null],
-      attrs: { md: '4', sm: '6' },
+      attrs: { md: '6', sm: '6' },
       datasets: [
         {
           label: 'Today',
           fill: 'start',
           borderWidth: 1.5,
-          backgroundColor: 'rgb(0,123,255,0.1)',
-          borderColor: 'rgb(0,123,255)',
-          data: [3, 2, 3, 2, 4, 5, 4]
+          backgroundColor: 'rgba(0, 184, 216, 0.1)',
+          borderColor: 'rgb(0, 184, 216)',
+          data: [1, 2, 1, 3, 5, 4, 7]
         }
       ]
-    }
+    },
+    {
+      label: 'Litecoin (LTC)',
+      value: '182',
+      percentage: '12.4',
+      increase: true,
+      chartLabels: [null, null, null, null, null, null, null],
+      attrs: { md: '6', sm: '6' },
+      datasets: [
+        {
+          label: 'Today',
+          fill: 'start',
+          borderWidth: 1.5,
+          backgroundColor: 'rgba(23,198,113,0.1)',
+          borderColor: 'rgb(23,198,113)',
+          data: [1, 2, 3, 3, 3, 4, 4]
+        }
+      ]
+    },
   ]
 };
 
