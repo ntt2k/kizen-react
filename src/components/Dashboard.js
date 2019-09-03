@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'shards-react';
 
 import PageTitle from './utils/PageTitle';
 import SmallStats from './utils/SmallStats';
-// import UsersOverview from "./../components/blog/UsersOverview";
+import BigStats from './utils/BigStats';
 
 const Dashboard = ({ smallStats }) => (
   <Container fluid className="main-content-container px-4">
@@ -35,12 +35,12 @@ const Dashboard = ({ smallStats }) => (
       ))}
     </Row>
 
-    {/* <Row> */}
-    {/* Users Overview */}
-    {/* <Col lg="12" md="12" sm="12" className="mb-4"> */}
-    {/* <UsersOverview /> */}
-    {/* </Col> */}
-    {/* </Row> */}
+    {/* Big Stats Blocks */}
+    <Row>
+      <Col lg="12" md="12" sm="12" className="mb-4">
+        <BigStats />
+      </Col>
+    </Row>
   </Container>
 );
 
@@ -126,7 +126,7 @@ Dashboard.defaultProps = {
           data: [1, 2, 3, 3, 3, 4, 4]
         }
       ]
-    },
+    }
   ]
 };
 
