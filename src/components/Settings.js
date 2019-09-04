@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { setDisplay } from '../store/action';
 
 import { Container, Row, Col } from 'shards-react';
 import Switch from 'react-switch';
@@ -48,7 +49,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  toggleDisplay: (id) => ({ type: 'SET_DISPLAY', payload: { id } })
+  toggleDisplay: setDisplay
 };
 
 export default connect(
