@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import styled from 'styled-components';
-import logo from '../assets/logo.svg';
+import { ReactComponent } from '../assets/logo.svg';
 import { Link } from 'react-router-dom';
 import { faChartArea, faCog } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,7 +16,7 @@ const Header = ({ location }) => {
     <header>
       <Navbar>
         <NavbarBrand>
-          <img src={logo} alt="logo" />
+          <ReactComponent alt="logo" />
           React
         </NavbarBrand>
 
@@ -39,7 +39,7 @@ const Header = ({ location }) => {
             </Link>
           </NavItem>
         </Nav>
-        
+
       </Navbar>
     </header>
   );
