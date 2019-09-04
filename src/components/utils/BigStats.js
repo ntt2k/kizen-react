@@ -67,7 +67,9 @@ class BigStats extends React.Component {
 
     const formattedChartData = {
       labels: Array.from(new Array(30), (_, i) => (i === 0 ? 1 : i)),
-      datasets: this.props.chartData.map(i => i.datasets ? i.datasets[0] : {})
+      datasets: this.props.chartData
+        .filter((chart) => chart.display)
+        .map((chart) => chart.datasets && chart.datasets[0])
     };
 
     const CryptoBigChart = new Chart(this.canvasRef.current, {
@@ -78,7 +80,9 @@ class BigStats extends React.Component {
 
     const buoMeta = CryptoBigChart.getDatasetMeta(0);
     buoMeta.data[0]._model.radius = 0;
-    buoMeta.data[formattedChartData.datasets[0].data.length - 1]._model.radius = 0;
+    buoMeta.data[
+      formattedChartData.datasets[0].data.length - 1
+    ]._model.radius = 0;
 
     // Render the chart.
     CryptoBigChart.render();

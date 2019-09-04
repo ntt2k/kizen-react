@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import shortid from 'shortid';
 import { CardBody } from 'shards-react';
-import { CardStyled, LabelStyled, ValueStyled, PercentageStyled } from '../../styles/Card';
+import {
+  CardStyled,
+  LabelStyled,
+  ValueStyled,
+  PercentageStyled
+} from '../../styles/Card';
 import Chart from './chart';
 
 class SmallStats extends React.Component {
@@ -107,7 +112,9 @@ class SmallStats extends React.Component {
               <ValueStyled className={valueClasses}>{value}</ValueStyled>
             </div>
             <div className={innerDataFieldClasses}>
-              <PercentageStyled className={percentageClasses}>{percentage}</PercentageStyled>
+              <PercentageStyled className={percentageClasses}>
+                {percentage}
+              </PercentageStyled>
             </div>
           </div>
           <canvas

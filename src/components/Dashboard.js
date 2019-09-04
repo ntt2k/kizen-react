@@ -20,20 +20,30 @@ const Dashboard = ({ chartData }) => (
 
     {/* Small Stats Blocks */}
     <Row>
-      {chartData.map((chart, idx) => (
-        <Col sm="12" md="6" lg="3" className="mb-4" key={idx} {...chart.attrs}>
-          <SmallStats
-            id={`small-chart-${idx}`}
-            chartData={chart.datasets}
-            chartLabels={chart.chartLabels}
-            label={chart.label}
-            value={chart.value}
-            percentage={chart.percentage}
-            increase={chart.increase}
-            decrease={chart.decrease}
-          />
-        </Col>
-      ))}
+      {chartData.map(
+        (chart, idx) =>
+          chart.display && (
+            <Col
+              sm="12"
+              md="6"
+              lg="3"
+              className="mb-4"
+              key={idx}
+              {...chart.attrs}
+            >
+              <SmallStats
+                id={`small-chart-${idx}`}
+                chartData={chart.datasets}
+                chartLabels={chart.chartLabels}
+                label={chart.label}
+                value={chart.value}
+                percentage={chart.percentage}
+                increase={chart.increase}
+                decrease={chart.decrease}
+              />
+            </Col>
+          )
+      )}
     </Row>
 
     {/* Big Stats Blocks */}
