@@ -53,7 +53,7 @@ Dashboard.defaultProps = {
     {
       id: 'btc',
       label: 'Bitcoin (BTC)',
-      value: '15,281',
+      value: '14250',
       percentage: '2.4%',
       increase: false,
       decrease: true,
@@ -98,9 +98,9 @@ Dashboard.defaultProps = {
             13200,
             13200,
             13400,
-            12910,
+            14250,
             13100,
-            14250
+            12910
           ]
         }
       ]
@@ -108,7 +108,7 @@ Dashboard.defaultProps = {
     {
       id: 'bch',
       label: 'Bitcoin Cash (BCH)',
-      value: '4800',
+      value: '1800',
       percentage: '3.8%',
       increase: false,
       decrease: true,
@@ -150,9 +150,9 @@ Dashboard.defaultProps = {
             940,
             1104,
             1280,
+            1400,
             2400,
-            1200,
-            5800,
+            4800,
             2400,
             2220,
             2000,
@@ -164,7 +164,7 @@ Dashboard.defaultProps = {
     {
       id: 'eth',
       label: 'Ethereum (ETH)',
-      value: '4,790',
+      value: '4,250',
       percentage: '10.7%',
       increase: true,
       chartLabels: [null, null, null, null, null, null, null],
@@ -265,7 +265,7 @@ Dashboard.defaultProps = {
             630,
             720,
             780,
-            1200
+            1182
           ]
         }
       ]
