@@ -3,6 +3,7 @@ const INITIAL_STATE = {
     {
       id: 'btc',
       label: 'Bitcoin (BTC)',
+      display: true,
       value: '14250',
       percentage: '2.4%',
       increase: false,
@@ -58,6 +59,7 @@ const INITIAL_STATE = {
     {
       id: 'bch',
       label: 'Bitcoin Cash (BCH)',
+      display: true,
       value: '1800',
       percentage: '3.8%',
       increase: false,
@@ -114,6 +116,7 @@ const INITIAL_STATE = {
     {
       id: 'eth',
       label: 'Ethereum (ETH)',
+      display: true,
       value: '4,250',
       percentage: '10.7%',
       increase: true,
@@ -168,6 +171,7 @@ const INITIAL_STATE = {
     {
       id: 'ltc',
       label: 'Litecoin (LTC)',
+      display: true,
       value: '1182',
       percentage: '5.4%',
       increase: true,

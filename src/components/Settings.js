@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -13,9 +13,7 @@ const SwitchLabelStyled = styled.span`
   top: -0.35rem;
 `;
 
-const Settings = ({ chartData }) => {
-  const [active, setActive] = useState(true);
-
+const Settings = ({ chartData, toggleDisplay }) => {
   return (
     <Container fluid className="main-content-container px-4">
       {/* Page Header */}
@@ -30,8 +28,8 @@ const Settings = ({ chartData }) => {
             <Switch
               height={24}
               width={52}
-              checked={active}
-              onChange={() => setActive(!active)}
+              checked={chart.display}
+              onChange={() => toggleDisplay(chart.id)}
             />
             <SwitchLabelStyled>{chart.label}</SwitchLabelStyled>
           </Col>
@@ -49,7 +47,9 @@ const mapStateToProps = (state) => ({
   chartData: state.chartData
 });
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+  toggleDisplay: (id) => ({ type: 'SET_DISPLAY', payload: { id } })
+};
 
 export default connect(
   mapStateToProps,
