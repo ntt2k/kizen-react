@@ -1,6 +1,6 @@
 ## Kizen React Dashboard
 
-Kizen code challenge prototype React Dashboard
+Kizen prototype React Dashboard
 
 ![Screenshot1](screenshots/screenshot1.png)
 
