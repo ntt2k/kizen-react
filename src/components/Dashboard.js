@@ -1,8 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
-import { Container, Row, Col } from 'shards-react';
+import { connect } from 'react-redux';
 
+import { Container, Row, Col } from 'shards-react';
 import PageTitle from './utils/PageTitle';
 import SmallStats from './utils/SmallStats';
 import BigStats from './utils/BigStats';
@@ -51,6 +51,6 @@ Dashboard.propTypes = {
 
 const mapStateToProps = (state) => ({
   chartData: state.chartData
-})
+});
 
 export default connect(mapStateToProps)(Dashboard);
